@@ -43,9 +43,9 @@ def fact_check_text(document_text, groq_key):
     
     user_prompt = f"Please extract and fact-check the claims in this text:\n\n{document_text}"
     
-    # Using llama3-8b-8192 which is incredibly fast and free on Groq
+    # Using llama-3.1-8b-instant which is incredibly fast and free on Groq
     response = client.chat.completions.create(
-        model="llama3-8b-8192", 
+        model="llama-3.1-8b-instant", 
         messages=[
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt}
